@@ -1,4 +1,4 @@
------------------------------------Redes-----------------------------------
+###################################Redes##################################
 
 ===========================================================================
                              USUARIO Y CONTRASEÑA
@@ -21,3 +21,31 @@ en las dos ultimas columnas la versión en la que estamos, y a la que vamos a
 actualizar. Pulsando la letra G se nos actualizarán. Si cancelamos la descarga, 
 todos estos archivos que tenemos a media descarga, se quedarán en el proxy
 de servidor de cada máquina.
+
+##########################################################################
+#             Niveles OSI             ##           Niveles TCP/IP        #
+##########################################################################
+# Aplicación                          ## Aplicación       # DNS          #
+# Presentación                        ##                  # HTTP(S)      #
+# Sesión                              ##                  # SOCKS        #     
+#                                     ##                  # DHCP         #
+#                                     ##                  # SSH          #
+#                                     ##                  # FTP          #
+#                                     ##                  # SMTP         #
+#                                     ##                  # POP3         #
+#                                     ##                  # IMAP         #
+#                                     ##                  # NNTP         #
+#                                     ##                  # SNMP         # 
+#                                     ##                  # MATRIX       #
+#                                     ##                  # P2P          #  
+##########################################################################
+# Transporte                          ## Transporte       # TCP          #
+##########################################################################
+# Red                                 ## Internet         # IPv4 # IPv6  #
+##########################################################################
+# Enlace                              ## Acceso a Red     # Ethernet     #
+# Físico                              ##                  # MAC          #
+#                                     ##                  # WiFi         #
+#                                     ##                  # Bluetooh     #
+##########################################################################
+
