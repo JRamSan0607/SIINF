@@ -1,0 +1,61 @@
+================================================================================
+                         COMANDOS QUE CREEMOS QUE HAY QUE USAR
+================================================================================
+$curl [Peitción HTTP]
+$jq
+
+$curl https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/
+PreciosCarburantes/EstacionesTerrestres/ | jq
+
+parlanchines HTTPS(S)
+================================================================================
+                                ENLACE PÁGINA WEB
+================================================================================
+https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/
+PreciosCarburantes/EstacionesTerrestres/
+================================================================================
+================================================================================
+                               COMANDO FILTROS JQ
+================================================================================
+ Aquí hay un ejemplo más completo de un filtro que obtiene la identificación, 
+ el título y la fecha de cada historia que el sitio publicó un martes.
+
+ $ curl -s https://feeds.npr.org/1019/feed.json |
+ jq '.items | .[] |
+ select(
+ .date_published |
+ .[0:19] + "Z" |
+ fromdate |
+ strftime("%a") == "Tue"
+ ) |
+ {id: .id, title:.title, date:.date_published}'
+
+Después de seleccionar la propiedad de los elementos , este filtro utiliza . [] 
+Para iterar sobre cada elemento. La mayor parte del filtro usa la función de 
+selección para mantener solo aquellas publicaciones con un valor date_published 
+cuyo día de la semana ( strftime ("% a") ) es martes . La función strftime 
+requiere una fecha formateada muy específicamente que el filtro . 
+[0:19] + "Z" construye.
+
+Después de seleccionar los elementos deseados, el filtro final crea un objeto 
+para cada uno con los campos obligatorios. Tenga en cuenta que cada vez que 
+cambie el feed, los resultados serán diferentes. Aquí hay un ejemplo tomado en 
+el momento de la publicación:
+
+ {
+ "id": "959667930",
+ "title": "Deplatforming: Not A First Amendment Issue, But Still A Tough Call
+ For Big Tech",
+ "date": "2021-01-26T17:00:00-05:00"
+ }
+ {
+ "id": "960679189",
+ "title": "My Pillow CEO Mike Lindell Permanently Suspended From Twitter",
+ "date": "2021-01-26T10:17:15-05:00"
+ }
+ {
+ "id": "960220477",
+ "title": "Is Your 401(k) Colluding To Make Cereal More Expensive?",
+ "date": "2021-01-26T06:31:24-05:00"
+ }
+================================================================================

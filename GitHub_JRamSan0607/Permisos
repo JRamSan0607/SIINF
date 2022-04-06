@@ -1,0 +1,26 @@
+----------------------------------- 23 Marzo ------------------------------------
+=================================================================================
+                                      APT
+=================================================================================
+· Instalación de paquetes con APT:
+	$sudo apt install nombrePaquete
+· Ver programas instalados con APT:
+	$sudo apt list --installed
+· Todos los comandos de APT:
+apt     policy
+	install
+	remove
+	purge
+	edit-sources
+	update
+	list 
+		--installed
+		--upgradable
+	upgrade / full-upgrade
+
+
+=================================================================================
+                            MIRAR MEMORIA DISPONIBLE
+=================================================================================
+· Comando ver espacio disponible en nuestro almacenamiento:
+	$df -h

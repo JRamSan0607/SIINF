@@ -1,0 +1,7 @@
+-- Cambiar permisos a un archivo --
+$cd /tmp
+$touch fou
+$chgrp sudo fou
+$chmod 466 fou
+$echo HOLA > fou
+

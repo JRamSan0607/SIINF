@@ -1,0 +1,23 @@
+-----------------------------------Redes-----------------------------------
+
+===========================================================================
+                             USUARIO Y CONTRASEÑA
+                               MAQUINA VIRTUAL
+===========================================================================
+usuario: permisos
+contraseña: permisos
+===========================================================================
+                                    TUI
+===========================================================================
+Tiene sus propios menus y paneles, e incluso pestañas.
+En preferencias se nos abre una ventana más en su propia pantalla
+
+Utilizando [ ] abres p cierras las ventanas que se abren (extensibles)
+
+Con U mayúscula cuando estamos en la ventana de Upgradables, se actualizarán
+todas las APT.
+Si después hacemos Ctrl+T, se nos abre una pantalla en la que podemos ver
+en las dos ultimas columnas la versión en la que estamos, y a la que vamos a 
+actualizar. Pulsando la letra G se nos actualizarán. Si cancelamos la descarga, 
+todos estos archivos que tenemos a media descarga, se quedarán en el proxy
+de servidor de cada máquina.
